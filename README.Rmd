@@ -89,6 +89,11 @@ Somewhere at the beginning of your project, include a code chunk that includes a
 
 # Quick Data Summary
 
+```{r echo=FALSE}
+df <- read.csv("./Sleep_health_and_lifestyle_dataset.csv")
+knitr::kable(df[1:5,])
+```
+
 What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
 
 # Results

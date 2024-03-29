@@ -71,6 +71,14 @@ warnings are accounted for)
 
 # Quick Data Summary
 
+| Person.ID | Gender | Age | Occupation           | Sleep.Duration | Quality.of.Sleep | Physical.Activity.Level | Stress.Level | BMI.Category | Blood.Pressure | Heart.Rate | Daily.Steps | Sleep.Disorder |
+|----------:|:-------|----:|:---------------------|---------------:|-----------------:|------------------------:|-------------:|:-------------|:---------------|-----------:|------------:|:---------------|
+|         1 | Male   |  27 | Software Engineer    |            6.1 |                6 |                      42 |            6 | Overweight   | 126/83         |         77 |        4200 | None           |
+|         2 | Male   |  28 | Doctor               |            6.2 |                6 |                      60 |            8 | Normal       | 125/80         |         75 |       10000 | None           |
+|         3 | Male   |  28 | Doctor               |            6.2 |                6 |                      60 |            8 | Normal       | 125/80         |         75 |       10000 | None           |
+|         4 | Male   |  28 | Sales Representative |            5.9 |                4 |                      30 |            8 | Obese        | 140/90         |         85 |        3000 | Sleep Apnea    |
+|         5 | Male   |  28 | Sales Representative |            5.9 |                4 |                      30 |            8 | Obese        | 140/90         |         85 |        3000 | Sleep Apnea    |
+
 What are the variables that you will be using in the main part of the
 report? What are their ranges? You could include a table with variable
 names, a short explanation, and (very broad) summary statistics.
