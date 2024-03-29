@@ -2,17 +2,11 @@ DS 202 Final Project
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit the README.Rmd file -->
-
-This repository serves as a starter repo for your final project, and
-this Rmd is supposed to serve as a starter file for your project report.
-
-## Part I: Repo Structure
-
-The structure sketched out below is an idea of what your repository
-might look like. You can use it as a starting base and change according
-to your needs. But think about the changes that you make!
-
-    -- code
+<!--
+This repository serves as a starter repo for your final project, and this Rmd is supposed to serve as a starter file for your project report.
+&#10;## Part I: Repo Structure {.unnumbered}
+&#10;The structure sketched out below is an idea of what your repository might look like. You can use it as a starting base and change according to your needs. But think about the changes that you make!
+&#10;    -- code
     |   |   -- any R scripts you need but don't want to include directly in the write-up
     -- data
     |   |   -- csv files (cleaned data)
@@ -26,26 +20,39 @@ to your needs. But think about the changes that you make!
     -- README.md
     -- README.Rmd
     -- README_files # folder with files created during the knitting process
+&#10;## Part II: Project report {.unnumbered}
+&#10;
+-->
 
-## Part II: Project report
+# Sleep Health and Lifestyle
 
-# Title of your project
-
-Authors: First Name Last Name, First Name Last Name, …
+Authors: Gabriel Getzinger, Michael Friedman
 
 ## Abstract (TL;DR)
 
-An abstract is a quick summary of your work. Ideally it should motivate
-someone to read the rest of the paper. Include one sentence each on
+In this project we will perform exploratory data analysis on a Kaggle
+sourced
+[dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data?select=Sleep_health_and_lifestyle_dataset.csv)
+with information regarding sleep quality along with various other
+biometric factors. We will attempt to uncover any underlying patterns in
+the data that may be helpful to know if one unfortunately suffers from a
+sleep disorder. As the project progresses, new datasets may be
+introduced as more questions arise.
 
--   what is the project about?
+<!--
+&#10;-   what is the project about?
 -   what is the motivation for doing it?
--   what data is your work based on? and where does it come from? = what
-    are your main findings? (one sentence each)
+-   what data is your work based on? and where does it come from? = what are your main findings? (one sentence each)
+&#10;-->
 
 # Intro/Background/Motivation
 
-What is the topic of your project, why is it relevant?
+According to the [Mayo
+Clinic](https://www.mayoclinic.org/diseases-conditions/sleep-disorders/symptoms-causes/syc-20354018):
+
+*“A sleep disorder can affect your overall health, safety and quality of
+life. Sleep deprivation can affect your ability to drive safely and
+increase your risk of other health problems.”*
 
 At the end of the Intro, write a sentence describing what each of the
 (result) sections is about, e.g. in section [Results 1](#results-1) we
@@ -95,10 +102,14 @@ sentence describes main finding, third sentence describes
 outliers/follow-up.</small>
 </p>
 
-![This is the figure caption. Make sure to use the description we
-practised in the homework: first sentence describes structure of the
-plot, second sentence describes main finding, third sentence describes
-outliers/follow-up.](README_files/figure-gfm/scatterplot-1.png)
+<figure>
+<img src="README_files/figure-gfm/scatterplot-1.png"
+alt="This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up." />
+<figcaption aria-hidden="true">This is the figure caption. Make sure to
+use the description we practised in the homework: first sentence
+describes structure of the plot, second sentence describes main finding,
+third sentence describes outliers/follow-up.</figcaption>
+</figure>
 
 <p>
 <small><strong><a name='fig:2nd scatterplot'>2nd
@@ -108,10 +119,14 @@ structure of the plot, second sentence describes main finding, third
 sentence describes outliers/follow-up.</small>
 </p>
 
-![This is the figure caption. Make sure to use the description we
-practised in the homework: first sentence describes structure of the
-plot, second sentence describes main finding, third sentence describes
-outliers/follow-up.](README_files/figure-gfm/2nd%20scatterplot-1.png)
+<figure>
+<img src="README_files/figure-gfm/2nd%20scatterplot-1.png"
+alt="This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up." />
+<figcaption aria-hidden="true">This is the figure caption. Make sure to
+use the description we practised in the homework: first sentence
+describes structure of the plot, second sentence describes main finding,
+third sentence describes outliers/follow-up.</figcaption>
+</figure>
 
 Additionally, you can also refer to different sections in your writeup
 by using anchors (links) to section headers. Here, we are referring to

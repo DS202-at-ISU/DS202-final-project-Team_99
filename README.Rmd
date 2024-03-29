@@ -32,7 +32,7 @@ library(ggplot2)
 library(dplyr)
 ```
 
-
+<!--
 This repository serves as a starter repo for your final project, and this Rmd is supposed to serve as a starter file for your project report.
 
 ## Part I: Repo Structure {.unnumbered}
@@ -57,22 +57,30 @@ The structure sketched out below is an idea of what your repository might look l
 ## Part II: Project report {.unnumbered}
 
 
+-->
+# Sleep Health and Lifestyle {.unnumbered}
 
-# Title of your project {.unnumbered}
-
-Authors: First Name Last Name, First Name Last Name, ...
+Authors: Gabriel Getzinger, Michael Friedman
 
 ## Abstract (TL;DR) {.unnumbered}
 
-An abstract is a quick summary of your work. Ideally it should motivate someone to read the rest of the paper. Include one sentence each on
+In this project we will perform exploratory data analysis on a Kaggle sourced [dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data?select=Sleep_health_and_lifestyle_dataset.csv) with information regarding sleep quality along with various other biometric factors. We will attempt to uncover any underlying patterns in the data that may be helpful to know if one unfortunately suffers from a sleep disorder. As the project progresses, new datasets may be introduced as more questions arise.
+
+<!--
 
 -   what is the project about?
 -   what is the motivation for doing it?
 -   what data is your work based on? and where does it come from? = what are your main findings? (one sentence each)
 
+-->
+
 # Intro/Background/Motivation
 
-What is the topic of your project, why is it relevant?
+According to the [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/sleep-disorders/symptoms-causes/syc-20354018):
+
+_"A sleep disorder can affect your overall health, safety and quality of life. Sleep deprivation can affect your ability to drive safely and increase your risk of other health problems."_
+
+
 
 At the end of the Intro, write a sentence describing what each of the (result) sections is about, e.g. in section [Results 1] we show the relationship between XXX and YYY,  section [Results 2] also considers the effect of variable ZZZ. ...
 Finally we conclude with a quick summary of our findings and potential follow-up work in section [Conclusions].
