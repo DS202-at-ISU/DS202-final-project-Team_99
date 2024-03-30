@@ -96,7 +96,7 @@ df <- read.csv("./Sleep_health_and_lifestyle_dataset.csv")
 knitr::kable(df[1:5,])
 ```
 
-Upon our initial first glance at the dataset, we found one item we could clean right away:
+Upon our initial first glance at the dataset, we found one item we could clean right away. The redundant category shown can be grouped together with the other one with the similar name:
 
 ```{r echo=TRUE}
 df[["BMI.Category"]] %>% unique()
@@ -113,6 +113,10 @@ What are the variables that you will be using in the main part of the report? Wh
 -->
 
 # Results
+
+(work in progress)
+
+<!--
 
 Each line of exploration is supposed to be featured in one of the Results sections. Make sure to change to more interesting section headers!
 
@@ -150,6 +154,8 @@ Give a quick summary of your work. Here is the place to be a bit critical and di
 
 Where does the data come from, who owns the data? Where are all the scripts that you need to clean the data?
 
+-->
+
 ## References {.unnumbered}
 
-List all resources you used.
+[Link to Kaggle dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data?select=Sleep_health_and_lifestyle_dataset.csv)

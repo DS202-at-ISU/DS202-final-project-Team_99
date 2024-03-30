@@ -71,7 +71,8 @@ Finally we conclude with a quick summary of our findings and potential follow-up
 |         5 | Male   |  28 | Sales Representative |            5.9 |                4 |                      30 |            8 | Obese        | 140/90         |         85 |        3000 | Sleep Apnea    |
 
 Upon our initial first glance at the dataset, we found one item we could
-clean right away:
+clean right away. The redundant category shown can be grouped together
+with the other one with the similar name:
 
 ``` r
 df[["BMI.Category"]] %>% unique()
@@ -92,79 +93,25 @@ df[["BMI.Category"]] %>% unique()
 
 # Results
 
-Each line of exploration is supposed to be featured in one of the
-Results sections. Make sure to change to more interesting section
-headers!
+(work in progress)
 
-## Results 1
-
-In your write-up, make sure to refer to all of the figures you create.
-You can include a hyperlink to the [scatterplot](#fig:scatterplot) by
-using the name of the code chunk (make sure, to give each code chunk a
-different name). In your markdown document you can create this link
-either by calling the function `chunkref` with the name of the code
-chunk in quotes, i.e. `r chunkref("scatterplot")` or by using the
-markdown expression `[scatterplot](#fig:scatterplot)`. Similarly, we can
-refer to the [2nd scatterplot](#fig:2nd%20scatterplot). Note that the
-figure captions appear above the figures - this saves us from having to
-scroll up after following the link.
-
-<p>
-<small><strong><a name='fig:scatterplot'>scatterplot</a></strong>: This
-is the figure caption. Make sure to use the description we practised in
-the homework: first sentence describes structure of the plot, second
-sentence describes main finding, third sentence describes
-outliers/follow-up.</small>
-</p>
-
-<figure>
-<img src="README_files/figure-gfm/scatterplot-1.png"
-alt="This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up." />
-<figcaption aria-hidden="true">This is the figure caption. Make sure to
-use the description we practised in the homework: first sentence
-describes structure of the plot, second sentence describes main finding,
-third sentence describes outliers/follow-up.</figcaption>
-</figure>
-
-<p>
-<small><strong><a name='fig:2nd scatterplot'>2nd
-scatterplot</a></strong>: This is the figure caption. Make sure to use
-the description we practised in the homework: first sentence describes
-structure of the plot, second sentence describes main finding, third
-sentence describes outliers/follow-up.</small>
-</p>
-
-<figure>
-<img src="README_files/figure-gfm/2nd%20scatterplot-1.png"
-alt="This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up." />
-<figcaption aria-hidden="true">This is the figure caption. Make sure to
-use the description we practised in the homework: first sentence
-describes structure of the plot, second sentence describes main finding,
-third sentence describes outliers/follow-up.</figcaption>
-</figure>
-
-Additionally, you can also refer to different sections in your writeup
-by using anchors (links) to section headers. Here, we are referring to
-subsection [Results 3](#results-3). The code for that is `[Results 3]`.
-
-## Results 2
-
-## Results 3
-
-…
-
-# Conclusions
-
-Give a quick summary of your work. Here is the place to be a bit
-critical and discuss potential limitations. Add a sentence on what else
-you would have liked to include in your data exploration if you had more
-time or more members in your team.
-
-## Data source
-
-Where does the data come from, who owns the data? Where are all the
-scripts that you need to clean the data?
+<!--
+&#10;Each line of exploration is supposed to be featured in one of the Results sections. Make sure to change to more interesting section headers!
+&#10;## Results 1
+&#10;In your write-up, make sure to refer to all of the figures you create. You can include a hyperlink to the [scatterplot](#fig:scatterplot) by using the name of the code chunk (make sure, to give each code chunk a different name). In your markdown document you can create this link either by calling the function `chunkref` with the name of the code chunk in quotes, i.e. `` r chunkref("scatterplot") `` or by using the markdown expression `[scatterplot](#fig:scatterplot)`. Similarly, we can refer to the [2nd scatterplot](#fig:2nd scatterplot). Note that the figure captions appear above the figures - this saves us from having to scroll up after following the link.
+&#10;<p><small><strong><a name='fig:scatterplot'>scatterplot</a></strong>: This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.</small></p>![This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.](README_files/figure-gfm/scatterplot-1.png)
+&#10;<p><small><strong><a name='fig:2nd scatterplot'>2nd scatterplot</a></strong>: This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.</small></p>![This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.](README_files/figure-gfm/2nd scatterplot-1.png)
+&#10;Additionally, you can also refer to different sections in your writeup by using anchors (links) to section headers. Here, we are referring to subsection [Results 3]. The code for that is `[Results 3]`.
+&#10;## Results 2
+&#10;## Results 3
+&#10;...
+&#10;# Conclusions
+&#10;Give a quick summary of your work. Here is the place to be a bit critical and discuss potential limitations. Add a sentence on what else you would have liked to include in your data exploration if you had more time or more members in your team. 
+&#10;## Data source {.unnumbered}
+&#10;Where does the data come from, who owns the data? Where are all the scripts that you need to clean the data?
+&#10;-->
 
 ## References
 
-List all resources you used.
+[Link to Kaggle
+dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data?select=Sleep_health_and_lifestyle_dataset.csv)
