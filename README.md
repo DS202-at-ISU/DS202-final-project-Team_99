@@ -54,20 +54,11 @@ Clinic](https://www.mayoclinic.org/diseases-conditions/sleep-disorders/symptoms-
 life. Sleep deprivation can affect your ability to drive safely and
 increase your risk of other health problems.”*
 
-At the end of the Intro, write a sentence describing what each of the
-(result) sections is about, e.g. in section [Results 1](#results-1) we
-show the relationship between XXX and YYY, section [Results
-2](#results-2) also considers the effect of variable ZZZ. … Finally we
-conclude with a quick summary of our findings and potential follow-up
-work in section [Conclusions](#conclusions).
-
-Somewhere at the beginning of your project, include a code chunk that
-includes all of the R packages you are using throughout. In this
-document, the setup code chunk is called `setup` (see line 8) Also make
-sure to set defaults for the code chunks - like should they be visible?
-(probably not: echo=FALSE). Do you want to automatically include
-warnings? (probably yes, for creating the Rmd, to make sure that all
-warnings are accounted for)
+<!--
+&#10;At the end of the Intro, write a sentence describing what each of the (result) sections is about, e.g. in section [Results 1] we show the relationship between XXX and YYY,  section [Results 2] also considers the effect of variable ZZZ. ...
+Finally we conclude with a quick summary of our findings and potential follow-up work in section [Conclusions].
+&#10;Somewhere at the beginning of your project, include a code chunk that includes all of the R packages you are using throughout. In this document, the setup code chunk is called `setup` (see line 8) Also make sure to set defaults for the code chunks - like should they be visible? (probably not: echo=FALSE). Do you want to automatically include warnings? (probably yes, for creating the Rmd, to make sure that all warnings are accounted for)
+&#10;-->
 
 # Quick Data Summary
 
@@ -79,9 +70,25 @@ warnings are accounted for)
 |         4 | Male   |  28 | Sales Representative |            5.9 |                4 |                      30 |            8 | Obese        | 140/90         |         85 |        3000 | Sleep Apnea    |
 |         5 | Male   |  28 | Sales Representative |            5.9 |                4 |                      30 |            8 | Obese        | 140/90         |         85 |        3000 | Sleep Apnea    |
 
-What are the variables that you will be using in the main part of the
-report? What are their ranges? You could include a table with variable
-names, a short explanation, and (very broad) summary statistics.
+Upon our initial first glance at the dataset, we found one item we could
+clean right away:
+
+``` r
+df[["BMI.Category"]] %>% unique()
+```
+
+    ## [1] "Overweight"    "Normal"        "Obese"         "Normal Weight"
+
+``` r
+df$BMI.Category[df$BMI.Category == "Normal Weight"] <- "Normal"
+df[["BMI.Category"]] %>% unique()
+```
+
+    ## [1] "Overweight" "Normal"     "Obese"
+
+<!--
+&#10;What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
+&#10;-->
 
 # Results
 
