@@ -91,6 +91,10 @@ Somewhere at the beginning of your project, include a code chunk that includes a
 
 # Quick Data Summary
 
+```{r, echo=FALSE}
+str(df)
+```
+
 ```{r echo=FALSE}
 df <- read.csv("./Sleep_health_and_lifestyle_dataset.csv")
 knitr::kable(df[1:5,])
@@ -106,6 +110,27 @@ df$BMI.Category[df$BMI.Category == "Normal Weight"] <- "Normal"
 df[["BMI.Category"]] %>% unique()
 ```
 
+An initial view of all subjects by...\
+
+Weight category:\
+```{r}
+df %>% ggplot(aes(x = BMI.Category, fill = BMI.Category)) + geom_bar()
+```
+\
+Gender:\
+```{r}
+df %>% ggplot(aes(x = Gender, fill = Gender)) + geom_bar()
+```
+\
+
+Self-reported sleep quality grouped by occupation:\
+```{r}
+p1 <- df %>% ggplot(aes(x = Occupation, y = Quality.of.Sleep, color = Occupation))
+p1 + geom_jitter() + theme(axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
+  scale_y_continuous(n.breaks=10)
+```
+\
+Note that the nurses responses are bifurcated, likely due to a 12-hour shift schedule.
 <!--
 
 What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
@@ -113,8 +138,17 @@ What are the variables that you will be using in the main part of the report? Wh
 -->
 
 # Results
+<!--
+Correlations between:
 
-(work in progress)
+disorder and: stress level, gender, occupation
+
+sleep quality and: heart rate, occupation
+
+What occupation has the worst sleep quality? highest incidence of disorder?
+
+which disorder is most prevalent among highest stressed?
+-->
 
 <!--
 

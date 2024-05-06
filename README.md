@@ -62,6 +62,8 @@ Finally we conclude with a quick summary of our findings and potential follow-up
 
 # Quick Data Summary
 
+    ## function (x, df1, df2, ncp, log = FALSE)
+
 | Person.ID | Gender | Age | Occupation           | Sleep.Duration | Quality.of.Sleep | Physical.Activity.Level | Stress.Level | BMI.Category | Blood.Pressure | Heart.Rate | Daily.Steps | Sleep.Disorder |
 |----------:|:-------|----:|:---------------------|---------------:|-----------------:|------------------------:|-------------:|:-------------|:---------------|-----------:|------------:|:---------------|
 |         1 | Male   |  27 | Software Engineer    |            6.1 |                6 |                      42 |            6 | Overweight   | 126/83         |         77 |        4200 | None           |
@@ -87,14 +89,31 @@ df[["BMI.Category"]] %>% unique()
 
     ## [1] "Overweight" "Normal"     "Obese"
 
-<!--
-&#10;What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
-&#10;-->
+An initial view of all subjects by…  
+
+Weight category:  
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->  
+Gender:  
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->  
+
+Self-reported sleep quality grouped by occupation:  
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->  
+Note that the nurses responses are bifurcated, likely due to a 12-hour
+shift schedule. <!--
+
+What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
+
+-->
 
 # Results
 
-(work in progress)
-
+<!--
+Correlations between:
+&#10;disorder and: stress level, gender, occupation
+&#10;sleep quality and: heart rate, occupation
+&#10;What occupation has the worst sleep quality? highest incidence of disorder?
+&#10;which disorder is most prevalent among highest stressed?
+-->
 <!--
 &#10;Each line of exploration is supposed to be featured in one of the Results sections. Make sure to change to more interesting section headers!
 &#10;## Results 1
