@@ -91,10 +91,6 @@ Somewhere at the beginning of your project, include a code chunk that includes a
 
 # Quick Data Summary
 
-```{r, echo=FALSE}
-str(df)
-```
-
 ```{r echo=FALSE}
 df <- read.csv("./Sleep_health_and_lifestyle_dataset.csv")
 knitr::kable(df[1:5,])

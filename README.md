@@ -62,8 +62,6 @@ Finally we conclude with a quick summary of our findings and potential follow-up
 
 # Quick Data Summary
 
-    ## function (x, df1, df2, ncp, log = FALSE)
-
 | Person.ID | Gender | Age | Occupation           | Sleep.Duration | Quality.of.Sleep | Physical.Activity.Level | Stress.Level | BMI.Category | Blood.Pressure | Heart.Rate | Daily.Steps | Sleep.Disorder |
 |----------:|:-------|----:|:---------------------|---------------:|-----------------:|------------------------:|-------------:|:-------------|:---------------|-----------:|------------:|:---------------|
 |         1 | Male   |  27 | Software Engineer    |            6.1 |                6 |                      42 |            6 | Overweight   | 126/83         |         77 |        4200 | None           |
@@ -92,12 +90,12 @@ df[["BMI.Category"]] %>% unique()
 An initial view of all subjects by…  
 
 Weight category:  
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->  
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->  
 Gender:  
-![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->  
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->  
 
 Self-reported sleep quality grouped by occupation:  
-![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->  
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->  
 Note that the nurses responses are bifurcated, likely due to a 12-hour
 shift schedule.  
 
