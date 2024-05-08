@@ -139,15 +139,87 @@ What are the variables that you will be using in the main part of the report? Wh
 
 # Results
 <!--
-Correlations between:
 
-disorder and: stress level, gender, occupation
 
-sleep quality and: heart rate, occupation
+What occupation has the worst sleep quality? Highest incidence of disorder?
 
-What occupation has the worst sleep quality? highest incidence of disorder?
 
-which disorder is most prevalent among highest stressed?
+Sleep disorder by occupation probability table.
+
+```{r}
+prop.table(table(df$Occupation, df$Sleep.Disorder), margin = 1)
+```
+
+There are a few oddly high proportions in the table. This is due to a small number of observations for certain occupations. The table below examines the row count of each observation.
+
+```{r}
+table(df$Occupation)
+```
+
+Manager (1), Sales Rep (2), Scientist (4) and Software Engineers (4) all contain substantially lower row counts than the remaining occupations.
+
+Sleep disorder by occupation probability table w/o aforementioned occupations.
+
+```{r}
+unwanted_values <- c("Manager", "Sales Representative", "Scientist", "Software Engineer")
+df_filtered <- df[!(df$Occupation %in% unwanted_values), ]
+
+prop.table(table(df_filtered$Occupation, df_filtered$Sleep.Disorder), margin = 1)
+```
+
+Salespeople (0.06) had the lowest proportion of neither disorders, followed by nurses (0.12) and teachers (0.23).
+The other four occupations all had relatively high proportions of neither disorders.
+
+Average sleep quality by occupation.
+
+```{r}
+aggregate(Quality.of.Sleep ~ Occupation, data = df_filtered, FUN = mean)
+```
+
+Salespeople (6.0) reported the lowest sleep quality, followed by doctors (6.65) and teachers (6.98).
+
+
+Which disorder is most prevalent among highest stressed?
+
+
+Sleep disorder by stress level probability table.
+```{r}
+df_filtered0 <- df[df$Stress.Level %in% c(7, 8), ]
+
+prop.table(table(df_filtered0$Stress.Level, df_filtered0$Sleep.Disorder), margin = 1)
+```
+
+Correlations
+
+
+Convert character variables to numeric variables.
+```{r}
+df <- df %>%
+  mutate(Gender_Numeric = as.numeric(factor(Gender)),
+         Occupation_Numeric = as.numeric(factor(Occupation)),
+         Sleep.Disorder_Numeric = as.numeric(factor(Sleep.Disorder)))
+```
+
+Correlations between disorder and: stress level, gender, occupation.
+
+```{R}
+cor(df$Stress.Level, df$Sleep.Disorder_Numeric)
+cor(df$Gender_Numeric, df$Sleep.Disorder_Numeric)
+cor(df$Occupation_Numeric, df$Sleep.Disorder_Numeric)
+```
+
+None of the correlations suggest a relationship.
+
+Correlations between sleep quality and: heart rate, occupation.
+
+```{R}
+cor(df$Heart.Rate, df$Quality.of.Sleep)
+cor(df$Occupation_Numeric, df$Quality.of.Sleep)
+```
+
+None of the correlations suggest a relationship.
+
+
 -->
 
 <!--
