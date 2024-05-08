@@ -140,6 +140,7 @@ What are the variables that you will be using in the main part of the report? Wh
 # Results
 <!--
 
+-->
 
 What occupation has the worst sleep quality? Highest incidence of disorder?
 
@@ -220,7 +221,6 @@ cor(df$Occupation_Numeric, df$Quality.of.Sleep)
 None of the correlations suggest a relationship.
 
 
--->
 
 <!--
 
