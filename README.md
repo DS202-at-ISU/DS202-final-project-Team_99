@@ -99,16 +99,13 @@ Gender:
 Self-reported sleep quality grouped by occupation:  
 ![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->  
 Note that the nurses responses are bifurcated, likely due to a 12-hour
-shift schedule. <!--
-
-What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
-
--->
-
-# Results
+shift schedule.  
 
 <!--
+&#10;What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
 &#10;-->
+
+# Results
 
 What occupation has the worst sleep quality? Highest incidence of
 disorder?

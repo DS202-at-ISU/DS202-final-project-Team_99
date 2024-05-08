@@ -130,7 +130,8 @@ p1 + geom_jitter() + theme(axis.text.x=element_blank(), axis.ticks.x=element_bla
   scale_y_continuous(n.breaks=10)
 ```
 \
-Note that the nurses responses are bifurcated, likely due to a 12-hour shift schedule.
+Note that the nurses responses are bifurcated, likely due to a 12-hour shift schedule.\
+
 <!--
 
 What are the variables that you will be using in the main part of the report? What are their ranges? You could include a table with variable names, a short explanation, and (very broad) summary statistics.
@@ -138,9 +139,6 @@ What are the variables that you will be using in the main part of the report? Wh
 -->
 
 # Results
-<!--
-
--->
 
 What occupation has the worst sleep quality? Highest incidence of disorder?
 
