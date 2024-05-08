@@ -108,26 +108,120 @@ What are the variables that you will be using in the main part of the report? Wh
 # Results
 
 <!--
-Correlations between:
-&#10;disorder and: stress level, gender, occupation
-&#10;sleep quality and: heart rate, occupation
-&#10;What occupation has the worst sleep quality? highest incidence of disorder?
-&#10;which disorder is most prevalent among highest stressed?
--->
+&#10;-->
+
+What occupation has the worst sleep quality? Highest incidence of
+disorder?
+
+Sleep disorder by occupation probability table.
+
+    ##                       
+    ##                          Insomnia       None Sleep Apnea
+    ##   Accountant           0.18918919 0.81081081  0.00000000
+    ##   Doctor               0.04225352 0.90140845  0.05633803
+    ##   Engineer             0.07936508 0.90476190  0.01587302
+    ##   Lawyer               0.04255319 0.89361702  0.06382979
+    ##   Manager              0.00000000 1.00000000  0.00000000
+    ##   Nurse                0.04109589 0.12328767  0.83561644
+    ##   Sales Representative 0.00000000 0.00000000  1.00000000
+    ##   Salesperson          0.90625000 0.06250000  0.03125000
+    ##   Scientist            0.00000000 0.50000000  0.50000000
+    ##   Software Engineer    0.25000000 0.75000000  0.00000000
+    ##   Teacher              0.67500000 0.22500000  0.10000000
+
+There are a few oddly high proportions in the table. This is due to a
+small number of observations for certain occupations. The table below
+examines the row count of each observation.
+
+    ## 
+    ##           Accountant               Doctor             Engineer 
+    ##                   37                   71                   63 
+    ##               Lawyer              Manager                Nurse 
+    ##                   47                    1                   73 
+    ## Sales Representative          Salesperson            Scientist 
+    ##                    2                   32                    4 
+    ##    Software Engineer              Teacher 
+    ##                    4                   40
+
+Manager (1), Sales Rep (2), Scientist (4) and Software Engineers (4) all
+contain substantially lower row counts than the remaining occupations.
+
+Sleep disorder by occupation probability table w/o aforementioned
+occupations.
+
+    ##              
+    ##                 Insomnia       None Sleep Apnea
+    ##   Accountant  0.18918919 0.81081081  0.00000000
+    ##   Doctor      0.04225352 0.90140845  0.05633803
+    ##   Engineer    0.07936508 0.90476190  0.01587302
+    ##   Lawyer      0.04255319 0.89361702  0.06382979
+    ##   Nurse       0.04109589 0.12328767  0.83561644
+    ##   Salesperson 0.90625000 0.06250000  0.03125000
+    ##   Teacher     0.67500000 0.22500000  0.10000000
+
+Salespeople (0.06) had the lowest proportion of neither disorders,
+followed by nurses (0.12) and teachers (0.23). The other four
+occupations all had relatively high proportions of neither disorders.
+
+Average sleep quality by occupation.
+
+    ##    Occupation Quality.of.Sleep
+    ## 1  Accountant         7.891892
+    ## 2      Doctor         6.647887
+    ## 3    Engineer         8.412698
+    ## 4      Lawyer         7.893617
+    ## 5       Nurse         7.369863
+    ## 6 Salesperson         6.000000
+    ## 7     Teacher         6.975000
+
+Salespeople (6.0) reported the lowest sleep quality, followed by doctors
+(6.65) and teachers (6.98).
+
+Which disorder is most prevalent among highest stressed?
+
+Sleep disorder by stress level probability table.
+
+    ##    
+    ##       Insomnia       None Sleep Apnea
+    ##   7 0.82000000 0.06000000  0.12000000
+    ##   8 0.04285714 0.47142857  0.48571429
+
+Correlations
+
+Convert character variables to numeric variables.
+
+Correlations between disorder and: stress level, gender, occupation.
+
+    ## [1] -0.0360578
+
+    ## [1] -0.2534153
+
+    ## [1] -0.1698002
+
+None of the correlations suggest a relationship.
+
+Correlations between sleep quality and: heart rate, occupation.
+
+    ## [1] -0.6598647
+
+    ## [1] -0.2780711
+
+None of the correlations suggest a relationship.
+
 <!--
 &#10;Each line of exploration is supposed to be featured in one of the Results sections. Make sure to change to more interesting section headers!
-&#10;## Results 1
-&#10;In your write-up, make sure to refer to all of the figures you create. You can include a hyperlink to the [scatterplot](#fig:scatterplot) by using the name of the code chunk (make sure, to give each code chunk a different name). In your markdown document you can create this link either by calling the function `chunkref` with the name of the code chunk in quotes, i.e. `` r chunkref("scatterplot") `` or by using the markdown expression `[scatterplot](#fig:scatterplot)`. Similarly, we can refer to the [2nd scatterplot](#fig:2nd scatterplot). Note that the figure captions appear above the figures - this saves us from having to scroll up after following the link.
-&#10;<p><small><strong><a name='fig:scatterplot'>scatterplot</a></strong>: This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.</small></p>![This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.](README_files/figure-gfm/scatterplot-1.png)
-&#10;<p><small><strong><a name='fig:2nd scatterplot'>2nd scatterplot</a></strong>: This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.</small></p>![This is the figure caption. Make sure to use the description we practised in the homework: first sentence describes structure of the plot, second sentence describes main finding, third sentence describes outliers/follow-up.](README_files/figure-gfm/2nd scatterplot-1.png)
-&#10;Additionally, you can also refer to different sections in your writeup by using anchors (links) to section headers. Here, we are referring to subsection [Results 3]. The code for that is `[Results 3]`.
-&#10;## Results 2
-&#10;## Results 3
+&#10;Figure 1: BMI
+Bar chart of BMI in the population split into three categories: 'Normal', 'Obese' and 'Overweight'. 'Normal' is most frequent followed by 'Overweight' and then 'Obese'.
+&#10;Figure 2: Gender
+Bar chart of gender in the population. As expected, the gender distribution is nearly split 50/50.
+&#10;Figure 3: Sleep Quality by Occupation
+Scatterplot of sleep quality by occupation.
 &#10;...
 &#10;# Conclusions
-&#10;Give a quick summary of your work. Here is the place to be a bit critical and discuss potential limitations. Add a sentence on what else you would have liked to include in your data exploration if you had more time or more members in your team. 
+&#10;unfortunately, the data wasn't super telling. We didn't walk away with any strong trends or patterns.
 &#10;## Data source {.unnumbered}
 &#10;Where does the data come from, who owns the data? Where are all the scripts that you need to clean the data?
+&#10;The data is from Kaggle. The Kaggle author is Laksika Tharmalingam
 &#10;-->
 
 ## References
